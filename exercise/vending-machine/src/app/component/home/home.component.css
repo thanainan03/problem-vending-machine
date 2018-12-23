@@ -1,0 +1,102 @@
+.wrapper {
+    margin-top:50px;
+    margin-bottom: 50px;
+}
+.machine {
+    background: #84DCC6;
+    border-radius:5px;
+}
+.inner {
+    padding: 15px;
+}
+.product {
+    background: whitesmoke;
+    border-radius: 5px;padding:5px;
+}
+.product-list {
+    margin-bottom: 5px;
+    margin-top:5px;
+}
+.card {
+    padding-bottom: 5px;
+    background: wheat;
+}
+.card span {
+    font-size: 12px;
+}
+.card button {
+    margin-top: 5px;
+    border-radius:5px;
+    border: 2px solid #fff;
+    background: tomato;
+    padding:0;
+    width:50%;
+    margin-left:25%;
+    font-weight: bold;
+}
+.push-box {
+    background: grey;
+    margin:5% 0 5% 0;
+    padding:20px 0 20px 0;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.push-button {
+    background: 393f4d;
+    border: 0;
+}
+.setInitial {
+    margin: 0;
+    padding: 0;
+}
+.total-box {
+    background: burlywood;
+    padding: 5px;
+    margin-top:50px;
+    color: red;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.coin-box {
+    background: burlywood;
+    padding: 5px;
+    margin-top:50px;
+    color: red;
+    font-weight: bold;
+    border-radius: 40px; 
+}
+.coin-button {
+    width: 30px;
+    font-weight: bold;
+    border-radius: 15px;
+    height: 30px;
+    padding: 3px 0;
+    background: #393f4d;
+    border: 0;
+}
+.refund-box {
+    margin:0;
+    padding:0;
+    margin-top:25px;
+}
+.refund-button {
+    padding:5px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 12px;
+    background: cadetblue;
+    border: 0;
+}
+.change-box {
+    margin-top:25px;
+    background: grey;
+    padding:20px 0 20px 0;
+    border-radius: 5px;
+}
+.change-button {
+    padding:5px 0 5px 0;
+    font-size: 16px;
+    background: #393f4d;
+    border: 0;
+}

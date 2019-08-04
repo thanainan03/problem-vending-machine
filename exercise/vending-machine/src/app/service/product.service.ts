@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ProductService {
-  api = environment.ProductListAPI;
+  api = 'https://www.mocky.io/v2/5c77c5b330000051009d64c9';
 
   constructor(private http: HttpClient) { }
   getProductList() {

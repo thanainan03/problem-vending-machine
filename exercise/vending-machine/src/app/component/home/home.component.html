@@ -6,12 +6,12 @@
           <div class="col-md-12 product">
             <div class="row">
               <!-- Repeat product  -->
-              <div class="col-md-6 product-list" *ngFor="let product of products;">
+              <div class="col-md-6 product-list" *ngFor="let product of products; let i = index">
                 <div class="card text-center">
-                  <img src="{{ product.image }}" class="card-img-top"  onerror="this.src='http://brandirectory.com/images/profile/logo/2000px_mountain_dew_logo_cms.jpg';" alt="{{ product.name }}"/>
-                  <b>{{product.name}}</b>
-                  <span >{{ product.price }} ฿</span>
-                  <button class="btn btn-primary" (click)="selectProduct( product.id )">BUY</button>            
+                  <img id="product_image[{{ i }}]" src="{{ product.image }}" class="card-img-top"  onerror="this.src='http://brandirectory.com/images/profile/logo/2000px_mountain_dew_logo_cms.jpg';" alt="{{ product.name }}"/>
+                  <b id="product_name[{{ i }}]">{{product.name}}</b>
+                  <span id="product_price[{{ i }}]">{{ product.price }} ฿</span>
+                  <button id="buy_button[{{ i }}]" class="btn btn-primary" (click)="selectProduct( product.id )">BUY</button>            
                 </div> <!-- End card -->
               </div> <!-- End row inner -->
             </div> <!-- End row -->
@@ -21,8 +21,8 @@
               <div class="row justify-content-center">
                 <div class="col-md-8 text-center push-box">
                   <!-- Button to getItem -->
-                  <button *ngIf="gotItem" class="btn btn-primary push-button"  style="background: #FF2A2C" (click)="getItem()">Push</button>
-                  <button *ngIf="!gotItem" class="btn push-button" disabled>Push</button>
+                  <button *ngIf="gotItem" id="push_item_button" class="btn btn-primary push-button"  style="background: #FF2A2C" (click)="getItem()">Push</button>
+                  <button *ngIf="!gotItem" id="push_item_button" class="btn push-button" disabled>Push</button>
                 </div>
               </div>
           </div>
@@ -30,7 +30,7 @@
         <!-- col-md-10 -->
         <div class="col-md-2 setInitial">
           <!-- Show total money -->
-          <div class="col-md-12 text-center total-box">
+          <div id="total" class="col-md-12 text-center total-box">
             {{ total }} 
           </div>
           <div class="col-md-12 text-center coin-box">
@@ -38,24 +38,24 @@
           </div>
           <!-- Coin Button 10฿ 5฿ 2฿ and 1฿ -->
           <div class="col-md-12 text-center" style="padding: 5px;">
-            <button class="btn btn-primary coin-button" (click)="insertCoin(10)">10</button>
+            <button  id="ten_coin_button" class="btn btn-primary coin-button" (click)="insertCoin(10)">10</button>
           </div>
           <div class="col-md-12 text-center" style="padding: 5px">
-            <button class="btn btn-primary coin-button" (click)="insertCoin(5)">5</button>
+            <button id="five_coin_button" class="btn btn-primary coin-button" (click)="insertCoin(5)">5</button>
           </div>
           <div class="col-md-12 text-center" style="padding: 5px">
-            <button class="btn btn-primary coin-button" (click)="insertCoin(2)">2</button>
+            <button id="two_coin_button" class="btn btn-primary coin-button" (click)="insertCoin(2)">2</button>
           </div>
           <div class="col-md-12 text-center" style="padding: 5px">
-            <button class="btn btn-primary coin-button" (click)="insertCoin(1)">1</button>
+            <button id="one_coin_button" class="btn btn-primary coin-button" (click)="insertCoin(1)">1</button>
           </div>
           <div class="col-md-12 text-center refund-box">
-            <button class="btn btn-primary refund-button" (click)="refundCoin()">REFUND</button>
+            <button id="refund_money_button" class="btn btn-primary refund-button" (click)="refundCoin()">REFUND</button>
           </div>
           <div class="col-md-12 text-center change-box">
             <!-- Button to get change  -->
-            <button *ngIf="gotChange" class="btn btn-primary change-button" style="background: #FFD02A" (click)="getChange()">change</button>   
-            <button *ngIf="!gotChange" class="btn btn-primary change-button" disabled>change</button>        
+            <button *ngIf="gotChange" id="change_money_button" class="btn btn-primary change-button" style="background: #FFD02A" (click)="getChange()">change</button>   
+            <button *ngIf="!gotChange" id="change_money_button" class="btn btn-primary change-button" disabled>change</button>        
           </div>
         </div> <!-- End col-md-2 setInitial -->
       </div> <!-- End row inner -->

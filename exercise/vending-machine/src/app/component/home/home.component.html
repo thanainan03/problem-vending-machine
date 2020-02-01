@@ -8,10 +8,10 @@
               <!-- Repeat product  -->
               <div class="col-md-6 product-list" *ngFor="let product of products; let i = index">
                 <div class="card text-center">
-                  <img id="product_image[{{ i }}]" src="{{ product.image }}" class="card-img-top"  onerror="this.src='http://brandirectory.com/images/profile/logo/2000px_mountain_dew_logo_cms.jpg';" alt="{{ product.name }}"/>
-                  <b id="product_name[{{ i }}]">{{product.name}}</b>
-                  <span id="product_price[{{ i }}]">{{ product.price }} ฿</span>
-                  <button id="buy_button[{{ i }}]" class="btn btn-primary" (click)="selectProduct( product.id )">BUY</button>            
+                  <img id="product_image_{{ product.name }}" src="{{ product.image }}" class="card-img-top"  onerror="this.src='http://brandirectory.com/images/profile/logo/2000px_mountain_dew_logo_cms.jpg';" alt="{{ product.name }}"/>
+                  <b id="product_name_{{ product.name }}">{{product.name}}</b>
+                  <span id="product_price_{{ product.name }}">{{ product.price }} ฿</span>
+                  <button id="buy_button_{{ product.name }}" class="btn btn-primary" (click)="selectProduct( product.id )">BUY</button>            
                 </div> <!-- End card -->
               </div> <!-- End row inner -->
             </div> <!-- End row -->
